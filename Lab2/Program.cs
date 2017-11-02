@@ -135,12 +135,13 @@ namespace Lab2
                 Console.Write("Enter your password: ");
                 password = Console.ReadLine();
 
-                if (db.Users.Any(o => (o.UserName == userName) && (o.Password == password) ))
+                if (db.Users.Any(o => (o.UserName == userName) && (o.Password == password)))
                 {
                     User logging = db.Users.Where(o => (o.UserName == userName) && (o.Password == password)).First();
                     logged = logging;
                     Console.WriteLine("Logged in succesfuly, {0}!", logging.DisplayName);
                 }
+                else Console.WriteLine("Wrong user name or password!");
             }
         }
         private static void Logout()

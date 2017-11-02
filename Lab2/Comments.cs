@@ -21,7 +21,7 @@ namespace Lab2
             Console.WriteLine("*************************************");
             Console.WriteLine("Comment from: {0}", User.DisplayName);
             Console.WriteLine("Comment added: {0}", AddDate);
-            Console.Write(Content);
+            Console.WriteLine(Content);
         }
 
         public static void Add(User user)
